@@ -1,8 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from "./Pages/Landingpage";
+import Signin from "./Pages/Signin"; // Make sure this path is correct
+import Signup from "./Pages/Signup";
 function App() {
   return (
-    <div className="text-center mt-10 text-3xl font-bold text-blue-600">
-      ✅ Tailwind is Working!
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+      
+      </Routes>
+    </Router>
   );
 }
 
